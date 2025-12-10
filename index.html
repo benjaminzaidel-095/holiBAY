@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chicken Chase · SF Bingo Night</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Chicken Chase · SF</h1>
+      <p class="subtitle">North Beach / Chinatown Crawl · Li Po · Vesuvio · Specs · Tupelo · 15 Romolo</p>
+      <div class="player-section">
+        <label for="playerName">Your name</label>
+        <input id="playerName" type="text" placeholder="Enter your name" />
+      </div>
+    </header>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-tab="bingoTab">Bingo Card</button>
+      <button class="nav-btn" data-tab="routeTab">Route</button>
+      <button class="nav-btn" data-tab="rolesTab">Roles</button>
+      <button class="nav-btn" data-tab="hostTab">Host / Leaderboard</button>
+    </nav>
+
+    <main>
+      <!-- Bingo Tab -->
+      <section id="bingoTab" class="tab active">
+        <section class="card-section">
+          <div class="bingo-header">
+            <span class="bingo-label">B I N G O</span>
+            <button id="resetButton" class="reset-button">Reset card</button>
+          </div>
+          <div id="bingoGrid" class="bingo-grid">
+            <!-- Tiles injected by JS -->
+          </div>
+        </section>
+
+        <section class="status-section">
+          <div id="statusMessage" class="status-message">
+            Tap tiles as you complete them.
+          </div>
+          <button id="claimBingoButton" class="primary-button">
+            I got Bingo
+          </button>
+        </section>
+
+        <section class="notes-section">
+          <h2>How it works</h2>
+          <ul>
+            <li>Each person opens this page on their own phone.</li>
+            <li>Tap tiles when your group completes that challenge.</li>
+            <li>The center tile is free and starts checked.</li>
+            <li>“I got Bingo” logs your win on the host device, if they’re using this view too.</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Route Tab -->
+      <section id="routeTab" class="tab">
+        <section class="route-section">
+          <h2>Tonight’s Route</h2>
+          <p class="route-intro">
+            Hit the bars in this order or improvise within the same cluster. Toggle them as you go.
+          </p>
+          <div id="routeList" class="route-list">
+            <!-- Route items injected by JS -->
+          </div>
+        </section>
+      </section>
+
+      <!-- Roles Tab -->
+      <section id="rolesTab" class="tab">
+        <section class="roles-section">
+          <h2>Roles</h2>
+          <p class="roles-intro">
+            Drop in your crew’s names (comma separated), then randomize roles. Each device can
+            keep the same assignments or create their own chaos.
+          </p>
+          <label for="participantNames" class="roles-label">
+            Participants (comma separated)
+          </label>
+          <textarea id="participantNames" rows="2" placeholder="e.g. Ben, Alex, Jess, Priya, Max"></textarea>
+
+          <div class="roles-controls">
+            <button id="randomizeRolesButton" class="primary-button">Randomize Roles</button>
+            <button id="clearRolesButton" class="ghost-button">Clear</button>
+          </div>
+
+          <div id="rolesResult" class="roles-result">
+            <!-- Roles mapping injected by JS -->
+          </div>
+
+          <details class="roles-detail">
+            <summary>Role definitions</summary>
+            <ul>
+              <li><b>Lead Chicken</b> · chooses next bar, cannot pick same direction twice in a row.</li>
+              <li><b>Barnkeeper</b> · forces the group to leave each bar within ~20 minutes.</li>
+              <li><b>Oracle</b> · whispers one fake prediction per bar about what will happen next.</li>
+              <li><b>Archivist</b> · logs one ridiculous quote per bar to read at the end.</li>
+              <li><b>Saboteur</b> · gently misdirects at least one person each transition.</li>
+              <li><b>Bard</b> · summarizes the last bar in one sentence upon entering the next.</li>
+              <li><b>Timekeeper</b> · actually watches the clock and keeps the crawl moving.</li>
+            </ul>
+          </details>
+        </section>
+      </section>
+
+      <!-- Host Tab -->
+      <section id="hostTab" class="tab">
+        <section class="host-section">
+          <h2>Host / Leaderboard</h2>
+          <p class="host-intro">
+            Optional host view. Keep this open on one phone if you want a simple leaderboard
+            of who called Bingo and when.
+          </p>
+
+          <div class="host-controls">
+            <label for="hostPlayerName">Player name (for logging wins)</label>
+            <input id="hostPlayerName" type="text" placeholder="Type name and log Bingo" />
+            <button id="hostLogBingoButton" class="primary-button small">
+              Log Bingo
+            </button>
+            <button id="hostClearLeaderboardButton" class="ghost-button small">
+              Clear leaderboard
+            </button>
+          </div>
+
+          <div class="leaderboard">
+            <h3>Leaderboard</h3>
+            <div id="leaderboardBody" class="leaderboard-body">
+              <!-- Entries injected by JS -->
+            </div>
+          </div>
+
+          <p class="host-note">
+            This leaderboard is stored only on this device. It will not sync across phones.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Chicken Chase · SF</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

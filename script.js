@@ -9,15 +9,15 @@ const LEADERBOARD_STORAGE_KEY = "cc_leaderboard_state_v1";
 const bingoItems = [
     [
         "Take a shot of fernet",
-        "Take a selfie at Li Po sign",
+        "Take a selfie at the Li Po sign",
         "Let someone else pick your drink",
-        "Take a group photo but everyone is Spiderman",
+        "Take a group photo where everyone is Spiderman",
         "Teach a stranger a dance move",
     ],
     [
-        "Get someone’s business card",
+        "Get someone's business card",
         "Make someone outside the group laugh",
-        "Do a Connor-style blind wine tasting, film it, and send it in the groupchat",
+        "Do a Connor-style blind wine tasting, film it, and send it in the group chat",
         "Participate in karaoke",
         "Get the bar to sing happy birthday",
     ],
@@ -49,55 +49,55 @@ const routeConfig = [
   {
     id: "li_po",
     name: "Li Po Lounge",
-    meta: "Chinatown · Dive / legendary cocktails",
+    meta: "Chinatown - dive / legendary cocktails",
     note: "Classic chaos starter. If you burn this, you earned the drink.",
   },
   {
     id: "vesuvio",
-    name: "Vesuvio Café",
-    meta: "Jack Kerouac Alley · Beat / bohemian",
+    name: "Vesuvio Cafe",
+    meta: "Jack Kerouac Alley - beat / bohemian",
     note: "Great early or middle bar. Easy to cross paths with other hunters here.",
   },
   {
     id: "maggies",
-    name: "Maggie’s",
-    meta: "North Beach · loud / sports / locals",
+    name: "Maggie's",
+    meta: "North Beach - loud / sports / locals",
     note: "Easy place to lose people or accidentally sink too much time.",
   },
   {
     id: "tupelo",
     name: "Tupelo",
-    meta: "North Beach · live music / blues-rock energy",
+    meta: "North Beach - live music / blues-rock energy",
     note: "Solid mid-to-late stop; easy to burn if you arrive at the wrong time.",
   },
   {
     id: "legacy",
     name: "Legacy",
-    meta: "North Beach · bar / lounge",
+    meta: "North Beach - bar / lounge",
     note: "Good mid-route bar if you need a reset without killing momentum.",
   },
   {
     id: "april_jean",
     name: "April Jean",
-    meta: "North Beach · newer spot / cocktails",
+    meta: "North Beach - newer spot / cocktails",
     note: "Nice wildcard choice; good place for Migs to hide in plain sight.",
   },
   {
     id: "devils_acre",
-    name: "Devil’s Acre",
-    meta: "Columbus · Victorian apothecary",
+    name: "Devil's Acre",
+    meta: "Columbus - Victorian apothecary",
     note: "Strong early bar; hints from here are extra confusing.",
   },
   {
     id: "lucky_spot",
     name: "The Lucky Spot",
-    meta: "North Beach · small, chaotic energy",
+    meta: "North Beach - small, chaotic energy",
     note: "If you burn this bar, it probably burns you right back.",
   },
   {
     id: "saloon",
     name: "The Saloon",
-    meta: "North Beach · oldest bar / live blues",
+    meta: "North Beach - oldest bar / live blues",
     note: "Good late-night chaos. Finding Migs here feels cinematic.",
   },
 ];
@@ -588,3 +588,4 @@ function renderLeaderboard() {
     container.appendChild(row);
   });
 }
+

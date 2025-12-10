@@ -7,42 +7,42 @@ const LEADERBOARD_STORAGE_KEY = "cc_leaderboard_state_v1";
 
 // Bingo items
 const bingoItems = [
-  [
-    "Order a drink you've never tried",
-    "Take a selfie at Li Po sign",
-    "Ask a bartender for a recommendation",
-    "Spot someone wearing a hat",
-    "Get a group photo taken by a stranger",
-  ],
-  [
-    "Take a photo doing a toast",
-    "Make someone outside the group laugh",
-    "Capture a bar interior selfie",
-    "Order a water between drinks",
-    "Spot someone in vintage clothing",
-  ],
-  [
-    "Say 'Where's the chicken?' in a bar",
-    "Order a drink in a fake accent",
-    "FREE SPACE",
-    "Spot someone in a leather jacket",
-    "High-five someone not in your group",
-  ],
-  [
-    "Leave an above-average tip",
-    "Hum or sing along to a song",
-    "Find a candle or moody low light",
-    "Share one fun fact about the bar",
-    "Take a before/after group photo",
-  ],
-  [
-    "Spot a neon sign",
-    "Trade a napkin or coaster with someone",
-    "Order a shot or very small drink",
-    "Spot someone with a beard",
-    "Take a final-bar group photo",
-  ],
-];
+    [
+        "Take a shot of fernet",
+        "Take a selfie at Li Po sign",
+        "Let someone else pick your drink",
+        "Take a group photo but everyone is Spiderman",
+        "Teach a stranger a dance move",
+    ],
+    [
+        "Get someone’s business card",
+        "Make someone outside the group laugh",
+        "Do a Connor-style blind wine tasting, film it, and send it in the groupchat",
+        "Participate in karaoke",
+        "Get the bar to sing happy birthday",
+    ],
+    [
+        "Say 'Where's the chicken?' in a bar",
+        "Order a drink in a fake accent",
+        "FREE SPACE",
+        "Play rock paper scissors with a stranger",
+        "High-five someone not in your group",
+    ],
+    [
+        "Leave an above-average tip",
+        "Collect >5 coasters",
+        "Play thumb war with a stranger",
+        "Share one fun fact about the bar",
+        "Take a before/after group photo",
+    ],
+    [
+        "Tell a joke to someone and make them laugh",
+        "Trade a secret with a stranger",
+        "Take a selfie with the bartender",
+        "Ask the bartender for their favorite drink and order it",
+        "Take a final-bar group photo",
+    ],
+    ];
 
 // Route config
 const routeConfig = [

@@ -73,51 +73,75 @@
 
       <!-- Rules Tab -->
       <section id="rulesTab" class="tab">
-        <section class="rules-section">
-          <h2>Game Overview</h2>
-          <p class="rules-text">
-            After dinner at China Live, Migs (the chicken) and Sara go ahead and post up at one bar on the map with the tab.
-            Everyone else splits into hunter teams and starts searching.
-          </p>
+<section class="rules-section">
+  <h2>Game Overview</h2>
+  <p class="rules-text">
+    After dinner at China Live, Migs (the chicken) and Sara go ahead and post up at one bar on the map with the tab.
+    Everyone else splits into hunter teams and starts searching the map bars to find them.
+  </p>
 
-          <h3>Map</h3>
-          <ul class="rules-list">
-            <li>The hunt map is the bars listed in the Map tab (Li Po, Vesuvio, Maggie’s, Tupelo, Legacy, April Jean, Devil’s Acre, The Lucky Spot, The Saloon).</li>
-            <li>Migs may only sit or move between bars on this list.</li>
-            <li>Hunters may only search bars on this list.</li>
-          </ul>
+  <h3>Map</h3>
+  <ul class="rules-list">
+    <li>The hunt map is fixed for the night: Li Po Lounge, Vesuvio Café, Maggie’s, Tupelo, Legacy, April Jean, Devil’s Acre, The Lucky Spot, and The Saloon.</li>
+    <li>Migs may only sit or move between bars on this list.</li>
+    <li>Hunters may only search bars on this list. Anything else is off-map and does not count.</li>
+  </ul>
 
-          <h3>Migs’ Rules</h3>
-          <ul class="rules-list">
-            <li>Picks a starting bar with Sara and sits there with the tab.</li>
-            <li>May move at most once every 30 minutes, except for one special Stealth Move where he can move early.</li>
-            <li>If hunters get photo evidence of Migs outside between bars, he must enter the nearest bar, buy a shot, and send a selfie.</li>
-            <li>Migs has a single “safe bar” agreed in advance. If he sits there 45 minutes without being found, he effectively “escapes” once.</li>
-            <li>Every 30-ish minutes, Migs sends either a true or false hint. He only gets a limited number of lies.</li>
-          </ul>
+  <h3>Migs &amp; Sara (Chicken Team)</h3>
+  <ul class="rules-list">
+    <li>Pick a starting bar on the map and stay put to start. You control the tab.</li>
+    <li>You may move at most once every 30 minutes, except for a single Stealth Move (see below).</li>
+    <li>If hunters get clear photo evidence of Migs outside between bars, he must immediately enter the nearest bar, buy a shot, and send a selfie as proof.</li>
+    <li>Before the game, quietly choose one bar as your “safe bar.” If Migs sits there for 45 uninterrupted minutes without being found, that counts as one successful escape.</li>
+  </ul>
 
-          <h3>Hunters’ Rules</h3>
-          <ul class="rules-list">
-            <li>Pick a bar, walk in, check if Migs is there.</li>
-            <li>If Migs is not there: the team must buy and finish a drink; that bar is “burned” for them unless they have a clear reason he moved back.</li>
-            <li>Burned bars should be tracked in the Map tab. Try not to re-check unless you are sure he moved.</li>
-            <li>If you catch Migs outside between bars, you trigger his shot-selfie penalty.</li>
-          </ul>
+  <h3>Migs Movement &amp; Stealth</h3>
+  <ul class="rules-list">
+    <li>Normal moves: after leaving dinner, Migs may only change bars on a ~30 minute timer (earlier if everyone agrees the clock has clearly passed).</li>
+    <li>Stealth Move: once per night, Migs may move early (before the 30-minute mark). After this, the normal 30-minute rule resumes.</li>
+    <li>When Migs moves, he should not announce it directly. Hunters infer movement from time and hints.</li>
+  </ul>
 
-          <h3>Bingo as Meta-Game</h3>
-          <ul class="rules-list">
-            <li>Bingo squares represent meaningful states: bars burned, bad hints, catches, escapes, and endgame chaos.</li>
-            <li>One square per bar visit max for your team; no farming multiple squares at once.</li>
-            <li>Use Bingo to record how stupid or brilliant the night gets; the hunt (finding Migs) is still the main win condition.</li>
-          </ul>
+  <h3>Hints &amp; Lies</h3>
+  <ul class="rules-list">
+    <li>Roughly every 30 minutes, Migs must send one hint to the group chat. It can be about what he sees, hears, or the general vibe.</li>
+    <li>Migs gets at most two lies for the entire night. Every other hint must be broadly true.</li>
+    <li>Hints can be ambiguous, cropped photos, or partial details, but outright fabrications beyond the two allowed lies are not in play.</li>
+  </ul>
 
-          <h3>Scoring (Optional)</h3>
-          <ul class="rules-list">
-            <li>Hunters: points for finding Migs first and for each Bingo line.</li>
-            <li>Migs: points for each 30 minutes survived, each misleading hint that sends people wrong, and any safe-bar escape window.</li>
-            <li>Or skip formal scoring and just use the leaderboard tab to log who actually called Bingo.</li>
-          </ul>
-        </section>
+  <h3>Hunters</h3>
+  <ul class="rules-list">
+    <li>Hunters break into one or two teams. Each team can use this site on one phone to track their own Bingo and visited bars.</li>
+    <li>At each step, a team picks a bar on the map, walks in, and checks if Migs is there.</li>
+    <li>If Migs is there, the hunt portion is over and the group can collapse to that bar and/or call an endgame however you want.</li>
+    <li>If Migs is not there: that team must buy and finish a drink in that bar before leaving. For that team, that bar is now “burned” unless they have a very clear reason to believe he has moved back later.</li>
+    <li>Use the Map tab to toggle bars as “Visited / burned” for your team so you do not accidentally loop the same wrong bar all night.</li>
+  </ul>
+
+  <h3>Outside Catches &amp; Penalties</h3>
+  <ul class="rules-list">
+    <li>If a hunter team spots Migs outside between bars and can provide photo evidence, that is an “outside catch.”</li>
+    <li>On an outside catch, Migs must immediately enter the nearest bar, buy a shot, and send a selfie as proof.</li>
+    <li>Outside catches do not end the hunt by themselves, but they are brutal for Migs and feed directly into Bingo squares.</li>
+  </ul>
+
+  <h3>Bingo Layer</h3>
+  <ul class="rules-list">
+    <li>The Bingo card tracks meaningful game events: burned bars, bad hints, outside catches, safe-bar escapes, and endgame chaos.</li>
+    <li>Each team should treat their card as a team card, not individual. One card per team.</li>
+    <li>Hard rule: at most one square can be ticked per bar visit for your team, and only when that event actually occurs.</li>
+    <li>When your team completes a full row, column, or diagonal, hit “I got Bingo” on your device. That logs the win to the host leaderboard on that phone.</li>
+  </ul>
+
+  <h3>Win Conditions (Soft)</h3>
+  <ul class="rules-list">
+    <li>Hunters “win” the hunt by finding Migs in a bar on the map.</li>
+    <li>Migs “wins” on survival if he stacks enough time and escapes: surviving multiple 30-minute windows without being found and/or completing a full 45-minute safe-bar sit without detection.</li>
+    <li>Bingo is a separate flex: teams race to complete lines based on how much chaos and bad decision-making the night produces.</li>
+    <li>Formal scoring is optional. You can treat the leaderboard as bragging rights and rely on memory and photos to argue about who actually played it best.</li>
+  </ul>
+</section>
+
       </section>
 
       <!-- Host Tab -->

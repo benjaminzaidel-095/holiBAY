@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chicken Chase · SF Bingo Night</title>
+  <title>Chicken Chase · SF Hunt + Bingo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,7 +10,9 @@
   <div class="app">
     <header class="header">
       <h1>Chicken Chase · SF</h1>
-      <p class="subtitle">North Beach / Chinatown Crawl · Li Po · Vesuvio · Specs · Tupelo · 15 Romolo</p>
+        <p class="subtitle">
+        Chinatown / North Beach Hunt · Li Po · Vesuvio · Maggie’s · Tupelo · Legacy · April Jean · Devil’s Acre · The Lucky Spot · The Saloon
+        </p>
       <div class="player-section">
         <label for="playerName">Your name</label>
         <input id="playerName" type="text" placeholder="Enter your name" />
@@ -18,10 +20,10 @@
     </header>
 
     <nav class="nav">
-      <button class="nav-btn active" data-tab="bingoTab">Bingo Card</button>
-      <button class="nav-btn" data-tab="routeTab">Route</button>
-      <button class="nav-btn" data-tab="rolesTab">Roles</button>
-      <button class="nav-btn" data-tab="hostTab">Host / Leaderboard</button>
+      <button class="nav-btn active" data-tab="bingoTab">Bingo</button>
+      <button class="nav-btn" data-tab="mapTab">Map</button>
+      <button class="nav-btn" data-tab="rulesTab">Rules</button>
+      <button class="nav-btn" data-tab="hostTab">Host</button>
     </nav>
 
     <main>
@@ -39,7 +41,7 @@
 
         <section class="status-section">
           <div id="statusMessage" class="status-message">
-            Tap tiles as you complete them.
+            Tap tiles only when the event actually happens.
           </div>
           <button id="claimBingoButton" class="primary-button">
             I got Bingo
@@ -47,22 +49,21 @@
         </section>
 
         <section class="notes-section">
-          <h2>How it works</h2>
+          <h2>Bingo layer</h2>
           <ul>
-            <li>Each person opens this page on their own phone.</li>
-            <li>Tap tiles when your group completes that challenge.</li>
-            <li>The center tile is free and starts checked.</li>
-            <li>“I got Bingo” logs your win on the host device, if they’re using this view too.</li>
+            <li>Card tracks hunt events: burned bars, Migs moves, outside catches, bad hints.</li>
+            <li>One square max per bar visit for your team.</li>
+            <li>When you complete a full row, column, or diagonal, hit “I got Bingo.”</li>
           </ul>
         </section>
       </section>
 
-      <!-- Route Tab -->
-      <section id="routeTab" class="tab">
+      <!-- Map Tab -->
+      <section id="mapTab" class="tab">
         <section class="route-section">
-          <h2>Tonight’s Route</h2>
+          <h2>Hunt Map · Chinatown / North Beach</h2>
           <p class="route-intro">
-            Hit the bars in this order or improvise within the same cluster. Toggle them as you go.
+            These are the only legal bars for the hunt. Toggle them as your team visits / burns them.
           </p>
           <div id="routeList" class="route-list">
             <!-- Route items injected by JS -->
@@ -70,40 +71,52 @@
         </section>
       </section>
 
-      <!-- Roles Tab -->
-      <section id="rolesTab" class="tab">
-        <section class="roles-section">
-          <h2>Roles</h2>
-          <p class="roles-intro">
-            Drop in your crew’s names (comma separated), then randomize roles. Each device can
-            keep the same assignments or create their own chaos.
+      <!-- Rules Tab -->
+      <section id="rulesTab" class="tab">
+        <section class="rules-section">
+          <h2>Game Overview</h2>
+          <p class="rules-text">
+            After dinner at China Live, Migs (the chicken) and Sara go ahead and post up at one bar on the map with the tab.
+            Everyone else splits into hunter teams and starts searching.
           </p>
-          <label for="participantNames" class="roles-label">
-            Participants (comma separated)
-          </label>
-          <textarea id="participantNames" rows="2" placeholder="e.g. Ben, Alex, Jess, Priya, Max"></textarea>
 
-          <div class="roles-controls">
-            <button id="randomizeRolesButton" class="primary-button">Randomize Roles</button>
-            <button id="clearRolesButton" class="ghost-button">Clear</button>
-          </div>
+          <h3>Map</h3>
+          <ul class="rules-list">
+            <li>The hunt map is the bars listed in the Map tab (Li Po, Vesuvio, Maggie’s, Tupelo, Legacy, April Jean, Devil’s Acre, The Lucky Spot, The Saloon).</li>
+            <li>Migs may only sit or move between bars on this list.</li>
+            <li>Hunters may only search bars on this list.</li>
+          </ul>
 
-          <div id="rolesResult" class="roles-result">
-            <!-- Roles mapping injected by JS -->
-          </div>
+          <h3>Migs’ Rules</h3>
+          <ul class="rules-list">
+            <li>Picks a starting bar with Sara and sits there with the tab.</li>
+            <li>May move at most once every 30 minutes, except for one special Stealth Move where he can move early.</li>
+            <li>If hunters get photo evidence of Migs outside between bars, he must enter the nearest bar, buy a shot, and send a selfie.</li>
+            <li>Migs has a single “safe bar” agreed in advance. If he sits there 45 minutes without being found, he effectively “escapes” once.</li>
+            <li>Every 30-ish minutes, Migs sends either a true or false hint. He only gets a limited number of lies.</li>
+          </ul>
 
-          <details class="roles-detail">
-            <summary>Role definitions</summary>
-            <ul>
-              <li><b>Lead Chicken</b> · chooses next bar, cannot pick same direction twice in a row.</li>
-              <li><b>Barnkeeper</b> · forces the group to leave each bar within ~20 minutes.</li>
-              <li><b>Oracle</b> · whispers one fake prediction per bar about what will happen next.</li>
-              <li><b>Archivist</b> · logs one ridiculous quote per bar to read at the end.</li>
-              <li><b>Saboteur</b> · gently misdirects at least one person each transition.</li>
-              <li><b>Bard</b> · summarizes the last bar in one sentence upon entering the next.</li>
-              <li><b>Timekeeper</b> · actually watches the clock and keeps the crawl moving.</li>
-            </ul>
-          </details>
+          <h3>Hunters’ Rules</h3>
+          <ul class="rules-list">
+            <li>Pick a bar, walk in, check if Migs is there.</li>
+            <li>If Migs is not there: the team must buy and finish a drink; that bar is “burned” for them unless they have a clear reason he moved back.</li>
+            <li>Burned bars should be tracked in the Map tab. Try not to re-check unless you are sure he moved.</li>
+            <li>If you catch Migs outside between bars, you trigger his shot-selfie penalty.</li>
+          </ul>
+
+          <h3>Bingo as Meta-Game</h3>
+          <ul class="rules-list">
+            <li>Bingo squares represent meaningful states: bars burned, bad hints, catches, escapes, and endgame chaos.</li>
+            <li>One square per bar visit max for your team; no farming multiple squares at once.</li>
+            <li>Use Bingo to record how stupid or brilliant the night gets; the hunt (finding Migs) is still the main win condition.</li>
+          </ul>
+
+          <h3>Scoring (Optional)</h3>
+          <ul class="rules-list">
+            <li>Hunters: points for finding Migs first and for each Bingo line.</li>
+            <li>Migs: points for each 30 minutes survived, each misleading hint that sends people wrong, and any safe-bar escape window.</li>
+            <li>Or skip formal scoring and just use the leaderboard tab to log who actually called Bingo.</li>
+          </ul>
         </section>
       </section>
 
@@ -117,14 +130,16 @@
           </p>
 
           <div class="host-controls">
-            <label for="hostPlayerName">Player name (for logging wins)</label>
-            <input id="hostPlayerName" type="text" placeholder="Type name and log Bingo" />
-            <button id="hostLogBingoButton" class="primary-button small">
-              Log Bingo
-            </button>
-            <button id="hostClearLeaderboardButton" class="ghost-button small">
-              Clear leaderboard
-            </button>
+            <label for="hostPlayerName">Player or team name to log</label>
+            <input id="hostPlayerName" type="text" placeholder="Name that just got Bingo" />
+            <div class="host-buttons">
+              <button id="hostLogBingoButton" class="primary-button small">
+                Log Bingo
+              </button>
+              <button id="hostClearLeaderboardButton" class="ghost-button small">
+                Clear leaderboard
+              </button>
+            </div>
           </div>
 
           <div class="leaderboard">
@@ -135,7 +150,7 @@
           </div>
 
           <p class="host-note">
-            This leaderboard is stored only on this device. It will not sync across phones.
+            Leaderboard is stored locally on this device only. It does not sync between phones.
           </p>
         </section>
       </section>

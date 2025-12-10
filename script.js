@@ -50,33 +50,58 @@ const routeConfig = [
     id: "li_po",
     name: "Li Po Lounge",
     meta: "Chinatown · Dive / legendary cocktails",
-    note: "Set the tone. Start here if you want a chaotic opening.",
+    note: "Classic chaos starter. If you burn this, you earned the drink.",
   },
   {
     id: "vesuvio",
     name: "Vesuvio Café",
     meta: "Jack Kerouac Alley · Beat / bohemian",
-    note: "Good second stop when everyone is warmed up.",
+    note: "Great early or middle bar. Easy to cross paths with other hunters here.",
   },
   {
-    id: "specs",
-    name: "Specs’ Twelve Adler Museum",
-    meta: "Across from Vesuvio · artifacts / weird vibe",
-    note: "Low-stakes, character-heavy, easy to regroup here.",
+    id: "maggies",
+    name: "Maggie’s",
+    meta: "North Beach · loud / sports / locals",
+    note: "Easy place to lose people or accidentally sink too much time.",
   },
   {
     id: "tupelo",
     name: "Tupelo",
     meta: "North Beach · live music / blues-rock energy",
-    note: "Mid-to-late night energy bar, especially on weekends.",
+    note: "Solid mid-to-late stop; easy to burn if you arrive at the wrong time.",
   },
   {
-    id: "romolo",
-    name: "15 Romolo",
-    meta: "Alley bar · speakeasy feel",
-    note: "Nice closing spot when the night needs a last chapter.",
+    id: "legacy",
+    name: "Legacy",
+    meta: "North Beach · bar / lounge",
+    note: "Good mid-route bar if you need a reset without killing momentum.",
+  },
+  {
+    id: "april_jean",
+    name: "April Jean",
+    meta: "North Beach · newer spot / cocktails",
+    note: "Nice wildcard choice; good place for Migs to hide in plain sight.",
+  },
+  {
+    id: "devils_acre",
+    name: "Devil’s Acre",
+    meta: "Columbus · Victorian apothecary",
+    note: "Strong early bar; hints from here are extra confusing.",
+  },
+  {
+    id: "lucky_spot",
+    name: "The Lucky Spot",
+    meta: "North Beach · small, chaotic energy",
+    note: "If you burn this bar, it probably burns you right back.",
+  },
+  {
+    id: "saloon",
+    name: "The Saloon",
+    meta: "North Beach · oldest bar / live blues",
+    note: "Good late-night chaos. Finding Migs here feels cinematic.",
   },
 ];
+
 
 // Role list
 const rolesList = [

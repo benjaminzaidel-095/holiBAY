@@ -30,7 +30,7 @@ body {
 
 .subtitle {
   margin: 4px 0 12px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   opacity: 0.8;
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .bingo-tile {
-  min-height: 70px;
+  min-height: 72px;
   padding: 8px;
   border-radius: 10px;
   border: 1px solid #1f2937;
@@ -192,20 +192,11 @@ body {
   pointer-events: none;
 }
 
-.bingo-tile.free {
-  border-style: dashed;
-  border-color: #4ade80;
-}
-
 .bingo-tile.checked {
   background: radial-gradient(circle at top left, #22c55e, #166534);
   box-shadow: 0 0 0 1px #16a34a, 0 10px 20px rgba(0, 0, 0, 0.5);
   border-color: transparent;
   transform: translateY(-1px);
-}
-
-.bingo-tile.checked.free {
-  border-style: solid;
 }
 
 .status-section {
@@ -231,7 +222,7 @@ body {
   border-color: #f97316;
 }
 
-/* Route */
+/* Map / route */
 
 .route-section {
   margin-top: 4px;
@@ -294,87 +285,35 @@ body {
   opacity: 0.9;
 }
 
-/* Roles */
+/* Rules */
 
-.roles-section {
+.rules-section {
   margin-top: 4px;
+  font-size: 0.82rem;
 }
 
-.roles-section h2 {
-  margin-bottom: 4px;
+.rules-section h2 {
   font-size: 1rem;
+  margin-bottom: 6px;
 }
 
-.roles-intro {
-  font-size: 0.8rem;
-  opacity: 0.9;
-  margin-bottom: 8px;
-}
-
-.roles-label {
-  font-size: 0.8rem;
-  opacity: 0.9;
-}
-
-#participantNames {
-  width: 100%;
-  margin-top: 4px;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #374151;
-  background: #020617;
-  color: #f9fafb;
-  resize: vertical;
-}
-
-#participantNames:focus {
-  outline: none;
-  border-color: #4ade80;
-}
-
-.roles-controls {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.roles-result {
-  border-radius: 10px;
-  border: 1px solid #111827;
-  background: #020617;
-  padding: 8px 10px;
-  font-size: 0.8rem;
-  min-height: 40px;
-}
-
-.role-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 4px;
-}
-
-.role-row-name {
-  font-weight: 500;
-}
-
-.role-row-role {
-  opacity: 0.9;
-  font-size: 0.78rem;
-}
-
-.roles-detail {
+.rules-section h3 {
   margin-top: 10px;
-  font-size: 0.8rem;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
 }
 
-.roles-detail summary {
-  cursor: pointer;
+.rules-text {
+  margin: 0 0 8px;
+  opacity: 0.9;
 }
 
-/* Host / Leaderboard */
+.rules-list {
+  padding-left: 18px;
+  margin: 4px 0 6px;
+}
+
+/* Host / leaderboard */
 
 .host-section {
   margin-top: 4px;
@@ -397,6 +336,11 @@ body {
   gap: 6px;
   margin-bottom: 10px;
   font-size: 0.8rem;
+}
+
+.host-buttons {
+  display: flex;
+  gap: 8px;
 }
 
 #hostPlayerName {
